@@ -22,8 +22,6 @@ public class AllGeofencesActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_geofences);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setTitle(R.string.app_title);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

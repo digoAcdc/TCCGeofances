@@ -34,8 +34,9 @@
     <string name="Units.Kilometers">km</string>
 
     <!-- Notification -->
-    <string name="Notification.Title">Aviso</string>
-    <string name="Notification.Text">Voce necessida de um financiamento Sr(a) %1$s!!!</string>
+    <string name="Notification.Title">Financiamento</string>
+  <!--  <string name="Notification.Text">Voce necessida de um financiamento Sr(a) %1$s!!!</string>-->
+    <string name="Notification.Text">Pensando em comprar um imóvel?</string>
 
     <!-- Toast -->
     <string name="Toast.Validation">Valores inválidos</string>
