@@ -35,7 +35,7 @@
 
     <!-- Notification -->
     <string name="Notification.Title">Financiamento</string>
-  <!--  <string name="Notification.Text">Voce necessida de um financiamento Sr(a) %1$s!!!</string>-->
+    <!--  <string name="Notification.Text">Voce necessida de um financiamento Sr(a) %1$s!!!</string>-->
     <string name="Notification.Text">Pensando em comprar um imóvel?</string>
 
     <!-- Toast -->

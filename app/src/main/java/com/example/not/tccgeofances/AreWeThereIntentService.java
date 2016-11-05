@@ -89,7 +89,7 @@ public class AreWeThereIntentService extends IntentService {
             String contextText = String.format(this.getResources().getString(R.string.Notification_Text), geofenceName);
 
             NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
-            Intent intent = new Intent(this, AllGeofencesActivity.class);
+            Intent intent = new Intent(this, NotificationActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             PendingIntent pendingNotificationIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 

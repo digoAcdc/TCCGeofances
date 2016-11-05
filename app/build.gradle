@@ -48,6 +48,7 @@ dependencies {
     compile 'com.bcgdv.asia.lib:fanmenu:1.2'
     compile 'com.google.android.gms:play-services:9.4.0'
     compile 'com.github.shell-software:fab:1.0.5'
+    compile 'com.synnapps:carouselview:0.0.9'
 
 
 }
