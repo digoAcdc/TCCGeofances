@@ -23,7 +23,6 @@ import java.util.Map;
  */
 
 public class AreWeThereIntentService extends IntentService {
-
     // region Properties
 
     private final String TAG = AreWeThereIntentService.class.getName();
