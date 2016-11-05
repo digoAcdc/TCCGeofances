@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">TCC Geofances</string>
+
+    <string name="app_title">GEO</string>
+
+    <string name="action_delete_all">Apagar todos Geofences</string>
+
+    <!-- Dialogs -->
+    <string name="AreYouSure">Confirma?</string>
+    <string name="Yes">Sim</string>
+    <string name="No">Nao</string>
+    <string name="Add">Add</string>
+    <string name="Cancel">Cancel</string>
+
+    <!-- Button -->
+    <string name="Button.DeleteGeofence">Apagar</string>
+
+    <!-- Labels -->
+    <string name="Label.Name">Nome</string>
+    <string name="Label.Latitude">Latitude</string>
+    <string name="Label.Longitude">Longitude</string>
+    <string name="Label.Radius">Radius</string>
+    <string name="Label.AddGeofence">Adicionar um Geofence</string>
+    <string name="Label.EmptyState">You haven\'t created any geofences yet. Tap the plus button to create one.\n\n\nWill we ever get there?! :]</string>
+
+    <!-- Hints -->
+    <string name="Hint.Name">Nome para o geofence</string>
+    <string name="Hint.Latitude" formatted="false">Latitude (%3.1f\u00B0 to %3.1f\u00B0)</string>
+    <string name="Hint.Longitude" formatted="false">Longitude (%4.1f\u00B0 to %4.1f\u00B0) </string>
+    <string name="Hint.Radius" formatted="false">Circunferencia (%3.2f to %3.1f km)</string>
+
+    <!-- Units -->
+    <string name="Units.Degrees">\u00B0</string>
+    <string name="Units.Kilometers">km</string>
+
+    <!-- Notification -->
+    <string name="Notification.Title">Aviso</string>
+    <string name="Notification.Text">Voce necessida de um financiamento Sr(a) %1$s!!!</string>
+
+    <!-- Toast -->
+    <string name="Toast.Validation">Valores inválidos</string>
+    <string name="Toast.Error">Ocorreu um erro. Por favor tente novamente.</string>
+</resources>
