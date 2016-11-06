@@ -1,31 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_notification"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.not.tccgeofances.NotificationActivity" >
+    android:background="@color/white">
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_notification"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.not.tccgeofances.NotificationActivity">
 
-        <com.synnapps.carouselview.CarouselView
-            android:id="@+id/carouselView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:fillColor="#FFFFFFFF"
-            app:pageColor="#00000000"
-            app:radius="6dp"
-            app:slideInterval="3000"
-            app:strokeColor="#FF777777"
-            app:strokeWidth="1dp" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:fillColor="#FFFFFFFF"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:slideInterval="5000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+        <com.antonionicolaspina.revealtextview.RevealTextView
+            android:id="@+id/rtvLabelNome"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#4682B4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="Pensando em comprar um imóvel"
+            app:rtv_duration="3000" />
+
+        <com.antonionicolaspina.revealtextview.RevealTextView
+            android:id="@+id/rtvLabelMatricula"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#4682B4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="nós podemos ajuda-lo a realizar seu sonho...."
+            android:layout_marginBottom="15dp"
+            app:rtv_duration="3000" />
+
+       <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:layout_marginTop="15dp"
+            android:text="Tudo o que um sonho precisa para ser realizado é alguém que acredite que ele possa ser realizado"
+            android:textAlignment="center"
+            android:textColor="@color/TextColor.Gray" />-->
+
+
+        <ImageButton
+            android:id="@+id/imbContato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/contato" />
+
 
     </LinearLayout>
-
-
-
-</LinearLayout>
+</ScrollView>

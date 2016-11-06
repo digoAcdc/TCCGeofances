@@ -12,6 +12,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,11 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AllGeofencesActivity" />
+        <activity android:name=".AllGeofencesActivity" android:screenOrientation="portrait"/>
 
         <service android:name=".AreWeThereIntentService" />
 
-        <activity android:name=".NotificationActivity">
+        <activity android:name=".NotificationActivity" android:screenOrientation="portrait">
            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
