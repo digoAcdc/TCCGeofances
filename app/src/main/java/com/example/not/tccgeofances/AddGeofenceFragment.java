@@ -3,7 +3,9 @@ package com.example.not.tccgeofances;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -67,17 +69,34 @@ public class AddGeofenceFragment extends DialogFragment {
                     @Override
                     public void onClick(View view) {
                         if (dataIsValid()) {
-                            NamedGeofence geofence = new NamedGeofence();
-                            geofence.name = getViewHolder().nameEditText.getText().toString();
-                            geofence.latitude = Double.parseDouble(getViewHolder().latitudeEditText.getText().toString());
-                            geofence.longitude = Double.parseDouble(getViewHolder().longitudeEditText.getText().toString());
-                            geofence.radius = Float.parseFloat(getViewHolder().radiusEditText.getText().toString()) * 1000.0f;
 
+                            if (ActivityCompat.checkSelfPermission(view.getContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
+                                // TODO: Consider calling
+                                //    ActivityCompat#requestPermissions
+                                // here to request the missing permissions, and then overriding
+                                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                //                                          int[] grantResults)
+                                // to handle the case where the user grants the permission. See the documentation
+                                // for ActivityCompat#requestPermissions for more details.
+                                ActivityCompat.requestPermissions(getActivity(), new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COARSE_LOCATION}, 1001);
 
-                            if (listener != null) {
-                                listener.onDialogPositiveClick(AddGeofenceFragment.this, geofence);
-                                dialog.dismiss();
                             }
+                            else
+                            {
+                                NamedGeofence geofence = new NamedGeofence();
+                                geofence.name = getViewHolder().nameEditText.getText().toString();
+                                geofence.latitude = Double.parseDouble(getViewHolder().latitudeEditText.getText().toString());
+                                geofence.longitude = Double.parseDouble(getViewHolder().longitudeEditText.getText().toString());
+                                geofence.radius = Float.parseFloat(getViewHolder().radiusEditText.getText().toString()) * 1000.0f;
+
+
+                                if (listener != null) {
+                                    listener.onDialogPositiveClick(AddGeofenceFragment.this, geofence);
+                                    dialog.dismiss();
+                                }
+                            }
+
+
                         } else {
                             showValidationErrorToast();
                         }
