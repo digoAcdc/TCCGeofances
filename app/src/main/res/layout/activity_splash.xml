@@ -67,7 +67,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="bottom|right"
                         android:gravity="bottom|right"
-                        android:text="João Carmo"
+                        android:text="João Vitor da Cunha Carmo"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="normal|bold" />
